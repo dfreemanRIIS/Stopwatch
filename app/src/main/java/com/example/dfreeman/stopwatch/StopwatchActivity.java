@@ -60,4 +60,10 @@ public class StopwatchActivity extends AppCompatActivity {
         savedInstanceState.putInt("seconds", seconds);
         savedInstanceState.putBoolean("running", running);
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        running = false;
+    }
 }
